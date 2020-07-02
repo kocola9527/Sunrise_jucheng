@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=en style="font-size: 54px;">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=stylesheet href=../css/main.css>
+</head>
+
+<body style="font-size: 12px;">
+    <div id=app>
+        <div data-v-d66e790a class=login>
+            <div data-v-d66e790a class=head>
+                <div data-v-d66e790a class=login__title><a href="index.html" data-v-d66e790a class=ju-icon-arrow>返回</a></div>
+            </div>
+            <div data-v-d66e790a class=body>
+                <div data-v-d66e790a>
+                    <img data-v-d66e790a src=../img/navbar_zhanshitu.png class=login__cnt__logo>
+                    <div data-v-d66e790a class=login__cnt__pwd>
+                        <div data-v-d66e790a class=login__cnt__pwd__input>
+                            <div data-v-d66e790a class=login__cnt__pwd__input__item><input data-v-d66e790a type=text
+                                    placeholder=请输入手机号/邮箱 class="user login__cnt__pwd__input__item__text" > </div>
+                            <div data-v-d66e790a class=login__cnt__pwd__input__item><input data-v-d66e790a
+                                    placeholder=请输入密码 type=password class="pass login__cnt__pwd__input__item__text"> </div>
+                        </div>
+                        <div data-v-d66e790a class=login__cnt__pwd__btn>
+                            <button data-v-d66e790a class="login_s login__cnt__pwd__btn__login">登 录</button>
+                            <button data-v-d66e790a class="add login__cnt__pwd__btn__login">注 册</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+<script>
+var user = document.querySelector('.user');
+var pass = document.querySelector('.pass');
+var login = document.querySelector('.login_s');
+var add = document.querySelector('.add');
+
+add.onclick = function (){
+    ajax({
+        url: '../php/addlogin1.php',
+        type: 'get',
+        data: 'act=add&user='+user.value+'&pass='+pass.value,
+        succeed: function (d){
+            var json = JSON.parse(d);
+            alert(json.msg);
+        },
+        failed: function (code){
+            alert('提交1失败');
+        }
+    });
+}
+
+login.onclick = function (){
+    ajax({
+        url: '../php/addlogin1.php',
+        type: 'get',
+        data: 'act=login_s&user='+user.value+'&pass='+pass.value,
+        succeed: function (d){
+            var json = JSON.parse(d);
+            alert(json.msg);
+        },
+        failed: function (code){
+            alert('提交失败');
+        }
+    });
+}
+
+
+
+
+</script>
+</body>
+
+</html>
