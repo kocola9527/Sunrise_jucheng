@@ -1,0 +1,144 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, textarea, p, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "微软雅黑", Arial;
+  font-size: 12px;
+  background-color: #fafafa;
+  color: #333;
+}
+
+body, textarea, input, button, select {
+  color: #333;
+  outline: 0;
+}
+
+input, button, textarea, select {
+  background: transparent;
+  border: none;
+  -webkit-appearance: transparent;
+     -moz-appearance: transparent;
+          appearance: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+u {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  color: #333;
+  cursor: pointer;
+}
+
+b, strong {
+  font-weight: normal;
+}
+
+em, i {
+  font-style: normal;
+}
+
+img {
+  border: 0;
+  display: block;
+  /*清除图片下面的大于3px的间距*/
+}
+
+input {
+  line-height: normal;
+  outline: none;
+}
+
+input, button, textarea, select {
+  background: transparent;
+  border: none;
+  -webkit-appearance: transparent;
+     -moz-appearance: transparent;
+          appearance: transparent;
+}
+
+.clearfix:after {
+  height: 0;
+  content: '0';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.box_border {
+  border: none !important;
+}
+
+.box_border_top {
+  border-top: none !important;
+}
+
+.hover li:hover a {
+  color: red;
+}
+
+.hover_a a:hover {
+  color: red;
+}
+
+.float_l {
+  float: left;
+}
+
+.float_r {
+  float: right;
+}
+
+.margin-top80 {
+  margin-top: 80px;
+}
+
+.w1204, .w-default {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+
+.padding-left30 {
+  padding-left: 30px;
+}
+
+.c-999 {
+  color: #999;
+}
+
+.list {
+  width: 1225px;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+/*# sourceMappingURL=reset.css.map */
